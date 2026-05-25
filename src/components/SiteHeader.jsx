@@ -12,6 +12,8 @@ export default function SiteHeader() {
         <NavLink to="/menu">Menu</NavLink>
         <NavLink to="/cart">My Cart</NavLink>
       </nav>
+
+      <img src="../images/halal.png" alt="" />
     </header>
   );
 }

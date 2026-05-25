@@ -9,7 +9,7 @@ export default function Footer() {
                     <a href="https://www.instagram.com/buttersweetcakes.surabaya/" className="fa fa-instagram"></a>
                     <a href="facebook.com" className="fa fa-facebook"></a>
                     <a href="whatsapp" className="fa fa-whatsapp"></a>
-                    <a href="email" className="fa fa-mail"></a>
+                    <a href="email" className="fa fa-envelope"></a>
                 </div>
             </div>
         </footer>

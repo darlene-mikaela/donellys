@@ -8,7 +8,7 @@ export default function CartCards({ item }) {
             </div>
             <div className="cart-item-details">
                 <h3>{item.title} ({item.size})</h3>
-                <p>Qty: {item.quantity} (@Rp{item.price})</p>
+                <p>Qty: {item.quantity} (@Rp{item.price.toLocaleString()})</p>
                 <p>Rp{(item.quantity * item.price).toLocaleString()}</p>
             </div>
         </div>
