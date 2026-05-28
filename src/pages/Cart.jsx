@@ -38,6 +38,7 @@ export default function Cart() {
                     <CartCards key={item.id} item={item} />
                 ))}
             </div>
+            {/* TO DO: FORM */}
             <Footer />
         </>
     )

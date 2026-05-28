@@ -36,7 +36,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/menu" element={<Menus onAddToBasket={addBasket}/>}></Route>
-        <Route path="/cart" element={<Cart item={basket}/>}></Route>
+        <Route path="/cart" element={<Cart item={basket} onAddToBasket={addBasket}/>}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </main>

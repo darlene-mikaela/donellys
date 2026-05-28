@@ -11,8 +11,8 @@ body {
   align-items: center;
   justify-content: center;
   max-height: 10%;
-  margin: 1.5rem 0 0 0;
-  padding: 10px;
+  margin: 3rem 0 0 0;
+  padding: 40px;
 }
 .footer h5 {
   font-size: 25px;
@@ -33,6 +33,7 @@ body {
   text-align: center;
   text-decoration: none;
   color: #e5ecfc;
+  cursor: pointer;
 }
 .fa:hover {
   opacity: 0.7;
@@ -47,6 +48,7 @@ body {
   box-sizing: border-box;
   height: 3.5rem;
   position: sticky;
+  top: 0;
 }
 .header img {
   height: 70%;
@@ -105,9 +107,6 @@ a:visited {
   padding: 1.5rem;
   border-radius: 10px;
   gap: 20px;
-}
-.card h2 {
-  height: 5%;
 }
 h2, h1 {
   text-align: center;
@@ -331,21 +330,28 @@ h2, h1 {
     transform: scale(1);
   }
 }
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .cart-card {
   background-color: white;
-  padding: 1rem;
+  padding: 2rem;
   margin: 1rem;
   border-radius: 16px;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   gap: 2rem;
-  width: 70vh;
+  width: 70%;
   align-items: center;
+  box-shadow: 0 4px 10px rgba(18, 19, 18, 0.2);
 }
 .img-container-cart {
   width: 100%;
-  aspect-ratio: 1/1;
-  width: 200px;
+  aspect-ratio: 1.5/1;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -357,8 +363,36 @@ h2, h1 {
   object-fit: cover;
   object-position: center;
 }
+.card .summary {
+  height: 3rem;
+}
 .card-title {
+  height: 2rem;
+}
+.card .view-details-tag .price-tag {
+  height: 1rem;
+}
+.cart-actions {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.cart-actions .counter-container {
+  border-radius: 5px;
+}
+.cart-actions i {
+  color: #222222;
+}
+.intro {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.headline {
+  width: 25%;
+}
+.sub-headline {
+  width: 75%;
 }
