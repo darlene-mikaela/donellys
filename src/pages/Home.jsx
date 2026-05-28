@@ -8,27 +8,38 @@ import TestimonyCards from "../components/TestimonyCards";
 export default function Home() {
     return (<>
         <SiteHeader />
-        <div className="intro">
-            <h1 className="headline">Freshly Baked Happiness</h1>
-            <p className="sub-headline">...</p>
-            <NavLink to="/menu"><button>Explore Our Menu</button></NavLink>
-        </div>
-        <div className="signature">
-            <h2>Our Signature Creations</h2>
-            <SignatureCards image={"../images/nastar2.webp"} title={"Nastar Jumbo"} desc={""}/>
-            <SignatureCards image={"../images/macaroni.webp"} title={"Macaroni Schotel"} desc={""}/>
-            <NavLink to="/menu"><button>See Full Menu and Pricing</button></NavLink>
-        </div>
-        <div className="packaging">
-            <h2>Different Occasions, Different Packagings!</h2>
-            <img src="../images/nastar-idulfitri.webp" alt="dus nastar idul fitri" />
-            <img src="../images/nastar-nataru.webp" alt="dus nastar natal tahun baru" />
-            <img src="../images/nastar-imlek.webp" alt="dus nastar imlek" />
-        </div>
-        <div className="testimony-container">
-            <h2>What Our Customers Are Saying</h2>
-            <TestimonyCards testi={"Nastarnya uenak poll, muantep"} name={"Ani"}/>
-            <TestimonyCards testi={"Macaroni Schotelnya cocok buat bagi-bagi pas kumpul sama keluarga"} name={"Budi"}/>
+        <div className="home-content">
+            <div className="intro">
+                <div className="container">
+                    <h1 className="headline">Freshly Baked Happiness</h1>
+                    <p className="sub-headline">Indulge in our premium artisan pastries, classic golden Nastar, and savory Macaroni Schotel—crafted with love, rich premium butter, and the finest ingredients delivered straight to your doorstep.</p>
+                    <NavLink to="/menu"><button>Explore Our Menu</button></NavLink>
+                </div>
+            </div>
+            <div className="signature">
+                <h2>Our Signature Creations</h2>
+                <div className="container">
+                    <SignatureCards image={"../images/nastar2.webp"} title={"Nastar Jumbo"} desc={"Oversized, premium golden pastries made with real Wijsman butter and packed with rich, homemade pineapple jam. They literally melt in your mouth!"} />
+                    <SignatureCards image={"../images/macaroni.webp"} title={"Macaroni Schotel"} desc={"A rich, comforting blend of savory macaroni, premium smoked beef, and a velvety, melted cheese crust. Baked fresh daily and served warm in a shared pan."} />
+                </div>
+                <NavLink to="/menu"><button>See Full Menu and Pricing</button></NavLink>
+            </div>
+            <div className="packaging">
+                <h2>Different Occasions, Different Packagings!</h2>
+                <div className="container">
+                    <img src="../images/nastar-imlek.webp" alt="dus nastar imlek" className="img-container" />
+                    <img src="../images/nastar-idulfitri.webp" alt="dus nastar idul fitri" className="img-container" />
+                    <img src="../images/nastar-nataru.webp" alt="dus nastar natal tahun baru" className="img-container" />
+                </div>
+            </div>
+            <div className="testimony">
+                <h2>What Our Customers Are Saying</h2>
+                <div className="container">
+                    <TestimonyCards testi={"Nastarnya uenak poll. Bahkan bisa di bawa ke luar negeri buat oleh-oleh."} name={"Andre"} />
+                    <TestimonyCards testi={"Macaroni Schotelnya cocok buat bagi-bagi pas kumpul sama keluarga."} name={"Nunung"} />
+                    <TestimonyCards testi={"Pelayanan oke banget, selalu dibalas dengan cepat dan tepat."} name={"Sule"} />
+                </div>
+            </div>
         </div>
         <Footer />
     </>);

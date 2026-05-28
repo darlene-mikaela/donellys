@@ -112,13 +112,19 @@ a:visited {
 h2, h1 {
   text-align: center;
 }
-.img-container-card {
-  width: 80%;
+.img-container-card,
+.img-container-popup,
+.img-container-cart,
+.signature-card .img-container,
+.packaging .img-container {
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+.img-container-card {
+  width: 80%;
 }
 .img-container-card img {
   width: 100%;
@@ -269,10 +275,6 @@ h2, h1 {
 .img-container-popup {
   width: 100%;
   max-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 .img-container-popup img {
   width: 100%;
@@ -353,10 +355,6 @@ h2, h1 {
   width: 100%;
   aspect-ratio: 1.5/1;
   width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 .img-container-cart img {
   width: 100%;
@@ -384,9 +382,22 @@ h2, h1 {
 .cart-actions i {
   color: #222222;
 }
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
 .intro {
   padding: 3rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro .container {
+  width: 70%;
 }
 .intro button,
 .signature button {
@@ -400,4 +411,70 @@ h2, h1 {
   text-decoration: none;
   cursor: pointer;
   color: #2f211e;
+}
+.signature,
+.packaging {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.signature .container,
+.packaging .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.signature-card {
+  padding: 2rem;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fdffd9;
+  border-radius: 20px;
+}
+.signature-card .img-container {
+  width: 80%;
+}
+.signature-card .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.packaging .img-container {
+  width: 300px;
+}
+.packaging img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.testimony {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.testimony .container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.testimony-card {
+  width: 250px;
+  background-color: #fdffd9;
+  padding: 1rem;
+  border-radius: 20px;
+  text-align: center;
 }

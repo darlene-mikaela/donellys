@@ -1,7 +1,7 @@
 export default function TestimonyCards({ testi , name }) {
     return (
         <div className="testimony-card">
-            <h5>{testi}</h5>
+            <p>{testi}</p>
             <p>- {name}</p>
         </div>
     )
