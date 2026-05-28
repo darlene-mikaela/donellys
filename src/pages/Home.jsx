@@ -1,17 +1,23 @@
+import { Link, NavLink } from "react-router";
 import SiteHeader from "../components/SiteHeader";
 import Footer from "../components/Footer";
 import Menus from "./Menus";
+import SignatureCards from "../components/SingatureCards";
+import TestimonyCards from "../components/TestimonyCards";
 
 export default function Home() {
     return (<>
         <SiteHeader />
         <div className="intro">
-            <h1 className="headline">Made with Love, Baked to Perfection</h1>
-            <p className="sub-headline">Welcome to Do Nellys, where comforting savories meet irresistible sweets! We specialize in crafting the ultimate comfort food experience, bringing you everything from rich, bubbling lasagnas and perfectly baked macaronis to the golden, melt-in-your-mouth sweetness of our signature pineapple cakes. Every single dish is baked fresh using the finest ingredients and a whole lot of love, ensuring that every bite feels like home. Whether you are gathering around the table for a cozy family meal or treating yourself to a well-deserved dessert, we are here to satisfy your cravings. Explore our menu today and bring the warmth of our kitchen into your home!</p>
+            <h1 className="headline">Freshly Baked Happiness</h1>
+            <p className="sub-headline">...</p>
+            <NavLink to="/menu"><button>Explore Our Menu</button></NavLink>
         </div>
         <div className="signature">
-            <h2>Our Signature Product</h2>
-            <p>Sweet and savory nastar, perfect for any occasion</p>
+            <h2>Our Signature Creations</h2>
+            <SignatureCards image={"../images/nastar2.webp"} title={"Nastar Jumbo"} desc={""}/>
+            <SignatureCards image={"../images/macaroni.webp"} title={"Macaroni Schotel"} desc={""}/>
+            <NavLink to="/menu"><button>See Full Menu and Pricing</button></NavLink>
         </div>
         <div className="packaging">
             <h2>Different Occasions, Different Packagings!</h2>
@@ -19,7 +25,11 @@ export default function Home() {
             <img src="../images/nastar-nataru.webp" alt="dus nastar natal tahun baru" />
             <img src="../images/nastar-imlek.webp" alt="dus nastar imlek" />
         </div>
-        <div className="testi"></div>
+        <div className="testimony-container">
+            <h2>What Our Customers Are Saying</h2>
+            <TestimonyCards testi={"Nastarnya uenak poll, muantep"} name={"Ani"}/>
+            <TestimonyCards testi={"Macaroni Schotelnya cocok buat bagi-bagi pas kumpul sama keluarga"} name={"Budi"}/>
+        </div>
         <Footer />
     </>);
 }

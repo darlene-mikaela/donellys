@@ -3,6 +3,7 @@ body {
   background-color: #EDD98B;
   margin: 0;
   padding: 0;
+  color: #2f211e;
 }
 .footer {
   background-color: white;
@@ -385,14 +386,18 @@ h2, h1 {
 }
 .intro {
   padding: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  text-align: center;
 }
-.headline {
-  width: 25%;
-}
-.sub-headline {
-  width: 75%;
+.intro button,
+.signature button {
+  padding: 1rem;
+  border-radius: 50px;
+  border: none;
+  background-color: #fdffd9;
+  font-weight: bold;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #2f211e;
 }
