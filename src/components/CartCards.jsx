@@ -1,23 +1,6 @@
 import React, { useState } from "react";
 
-export default function CartCards({ item, onAddToBasket }) {
-    const [quantity, setQuantity] = useState(item.quantity); // start at item quantity
-
-    const increment = () => setQuantity(prev => prev + 1);
-    const decrement = () => setQuantity(prev => (prev === 1 ? prev : prev - 1));
-    const handleAddClick = () => {
-        const orderItem = {
-            id: item.id,
-            title: item.title,
-            summary: item.summary,
-            image: item.image,
-            size: selectedSize.name,
-            price: selectedSize.price,
-            quantity: quantity
-        }
-        addToBasket(orderItem);
-    }
-
+export default function CartCards({ item, onUpdateQuantity, onDeleteClick }) {
     return (
         <div className="cart-card">
             <div className="img-container-cart">
@@ -30,11 +13,11 @@ export default function CartCards({ item, onAddToBasket }) {
             </div>
             <div className="cart-actions">
                 <div className="counter-container">
-                    <button onClick={decrement}>-</button>
-                    <span>{quantity}</span>
-                    <button onClick={increment}>+</button>
+                    <button onClick={() => onUpdateQuantity(item.id, item.size, -1)}>-</button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => onUpdateQuantity(item.id, item.size, 1)}>+</button>
                 </div>
-                <i className="fa fa-trash" aria-hidden="true"></i>
+                <i className="fa fa-trash" aria-hidden="true" onClick={() => onDeleteClick}></i>
             </div>
         </div>
     )

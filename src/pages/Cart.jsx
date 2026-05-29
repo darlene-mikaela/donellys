@@ -3,43 +3,40 @@ import CartCards from "../components/CartCards";
 import SiteHeader from "../components/SiteHeader";
 import Footer from "../components/Footer";
 
-export default function Cart() {
-    const [cart, setCart] = useState([]);
-
-    useEffect(() => {
-        const savedBasket = localStorage.getItem('myBasket');
-
-        const parsedData = JSON.parse(savedBasket);
-        setCart(parsedData);
-    }, []); // no dependencies
-
+export default function Cart({ basket, onUpdateQuantity, onDeleteClick }) {
     // calculate price
-    const totalPrice = cart.reduce((item) => (item.price * item.quantity), 0);
+    const totalPrice = basket ? basket.reduce((item) => (item.price * item.quantity), 0) : 0;
 
-    if (cart.length === 0) {
-        return (
-            <>
-                <SiteHeader />
-                <div className="cart-container">
-                    <h1>Checkout</h1>
-                    <p>Your basket is empty! Go back to the menu and add some food</p>
+    if (basket) {
+        if (basket.length === 0) {
+            return (
+                <div className="cart-wrapper">
+                    <SiteHeader />
+                    <div className="cart-container">
+                        <h1>Checkout</h1>
+                        <p>Your basket is empty! Go back to the menu and add some food</p>
+                    </div>
+                    <Footer />
                 </div>
-                <Footer />
-            </>
-        )
+            )
+        }
     }
 
     return (
-        <>
+        <div className="cart-wrapper">
+
             <SiteHeader />
             <div className="cart-container">
                 <h1>Checkout</h1>
-                {cart.map((item) => (
-                    <CartCards key={item.id} item={item} />
+                {basket.map((item) => (
+                    <CartCards key={`${item.id}-${item.size}`}
+                        item={item}
+                        onUpdateQuantity={onUpdateQuantity}
+                        onDeleteClick={onDeleteClick} />
                 ))}
             </div>
             {/* TO DO: FORM */}
             <Footer />
-        </>
+        </div>
     )
 }
