@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function CartCards({ item, onUpdateQuantity, onDeleteClick }) {
+export default function CartCards({ item, onUpdateQuantity, onDeleteClick, onTrashClick }) {
     return (
         <div className="cart-card">
             <div className="img-container-cart">
@@ -17,7 +17,7 @@ export default function CartCards({ item, onUpdateQuantity, onDeleteClick }) {
                     <span>{item.quantity}</span>
                     <button onClick={() => onUpdateQuantity(item.id, item.size, 1)}>+</button>
                 </div>
-                <i className="fa fa-trash" aria-hidden="true" onClick={() => onDeleteClick}></i>
+                <i className="fa fa-trash" aria-hidden="true" onClick={() => onTrashClick(item.id, item.size, item)}></i>
             </div>
         </div>
     )

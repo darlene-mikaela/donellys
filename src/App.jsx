@@ -50,13 +50,18 @@ export default function App() {
     })
   }
 
-  const executeDelete =  () => {
+  const executeDelete = () => {
     if (itemToDelete) {
-      setBasket((prevBasket) =>{
+      setBasket((prevBasket) => {
         return prevBasket.filter(item => !(item.id === itemToDelete.id && item.size === itemToDelete.size));
       })
       setItemToDelete(null);
     }
+  }
+
+  const directDelete = (id, size, item) => {
+    const targetItem = basket.find(item => item.id === id && item.size === size);
+    if (targetItem) setItemToDelete({ id, size, title: item.title });
   }
 
   return (<>
@@ -64,16 +69,17 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/menu" element={<Menus onAddToBasket={addBasket} />}></Route>
-        <Route path="/cart" element={<Cart basket={basket} 
-                            onUpdateQuantity={updateQuantity} 
-                            onDeleteClick={executeDelete}/>}></Route>
+        <Route path="/cart" element={<Cart basket={basket}
+          onUpdateQuantity={updateQuantity}
+          onDeleteClick={executeDelete}
+          onTrashClick={directDelete} />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
 
       {itemToDelete !== null && (
-        <Alert 
-          onClose={() => setItemToDelete(null)} 
-          confirmDelete={executeDelete} 
+        <Alert
+          onClose={() => setItemToDelete(null)}
+          confirmDelete={executeDelete}
         />
       )}
     </main>
