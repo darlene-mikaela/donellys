@@ -12,7 +12,7 @@ export default function App() {
     return savedBasket ? JSON.parse(savedBasket) : [];
   });
   const [itemToDelete, setItemToDelete] = useState(null);
-
+  
   useEffect(() => {
     localStorage.setItem("myBasket", JSON.stringify(basket));
   }, [basket]);
@@ -64,6 +64,10 @@ export default function App() {
     if (targetItem) setItemToDelete({ id, size, title: item.title });
   }
 
+  const handleConfirmCheckout = () => {
+    setBasket([]);
+  }
+
   return (<>
     <main className="page">
       <Routes>
@@ -72,7 +76,8 @@ export default function App() {
         <Route path="/cart" element={<Cart basket={basket}
           onUpdateQuantity={updateQuantity}
           onDeleteClick={executeDelete}
-          onTrashClick={directDelete} />}></Route>
+          onTrashClick={directDelete}
+          onConfirmCheckout={handleConfirmCheckout} />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
 

@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router";
 import CartCards from "../components/CartCards";
+import CheckoutSuccess from "../components/CheckoutSuccess";
 import SiteHeader from "../components/SiteHeader";
 import Footer from "../components/Footer";
 
-export default function Cart({ basket, onUpdateQuantity, onDeleteClick, onTrashClick }) {
+export default function Cart({ basket, onUpdateQuantity, onDeleteClick, onTrashClick, onConfirmCheckout }) {
     const [showAddress, setShowAddress] = useState(false);
+    const [showCheckoutConfirm, setShowCheckoutConfirm] = useState(false);
+
+    const handleCancelCheckout = () => {
+        showCheckoutConfirm(false);
+    }
+
     // calculate price
     const totalPrice = basket ? basket.reduce((sum, item) => sum + (item.price * item.quantity), 0) : 0;
     const today = new Date(); // todays date
@@ -15,9 +23,10 @@ export default function Cart({ basket, onUpdateQuantity, onDeleteClick, onTrashC
         return (
             <div className="cart-wrapper">
                 <SiteHeader />
-                <div className="cart-container">
+                <div className="cart-empty-container">
                     <h1>Checkout</h1>
                     <p>Your basket is empty! Go back to the menu and add some food</p>
+                    <NavLink to="/menu"><button>Explore Our Menu</button></NavLink>
                 </div>
                 <Footer />
             </div>
@@ -116,12 +125,23 @@ export default function Cart({ basket, onUpdateQuantity, onDeleteClick, onTrashC
                         </div>
 
                         <div className="submit-btn">
-                            <button name="submit">Finish my order!</button>
+                            <button type="button" name="submit" onClick={(e) => {
+                                e.preventDefault();
+                                setShowCheckoutConfirm(true);
+                            }}>Finish my order!</button>
                         </div>
                     </form>
                 </div>
             </div>
             <Footer />
+
+            {showCheckoutConfirm && <CheckoutSuccess
+                onConfirmCheckout={onConfirmCheckout}
+                onCancelCheckout={() => {
+                    setShowCheckoutConfirm(false);
+                }}
+                checkoutBasket={basket}
+                totalPrice={totalPrice} />}
         </div>
     )
 }

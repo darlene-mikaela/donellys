@@ -13,7 +13,7 @@ body {
   justify-content: center;
   max-height: 10%;
   margin: 3rem 0 0 0;
-  padding: 40px;
+  padding: 20px;
   color: #3E2723;
 }
 .footer .fa {
@@ -54,10 +54,6 @@ body {
   height: 3.5rem;
   position: sticky;
   top: 0;
-}
-.header img {
-  height: 70%;
-  justify-content: right;
 }
 .nav {
   display: flex;
@@ -214,7 +210,8 @@ h2, h1 {
 }
 /* make dimming background */
 .popup-overlay,
-.alert-overlay {
+.alert-overlay,
+.checkout-success-overlay {
   position: fixed;
   z-index: 100; /* ensure above everyhting */
   top: 0;
@@ -229,7 +226,8 @@ h2, h1 {
   animation: fadeIn 0.25 ease;
 }
 .popup-content,
-.alert-content {
+.alert-content,
+.checkout-success-content {
   border-radius: 16px;
   max-width: 400px;
   position: relative;
@@ -529,7 +527,8 @@ h2, h1 {
   padding: 24px;
   background-color: #ffffff;
 }
-.alert-content .options {
+.alert-content .options,
+.checkout-success-content .options {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -541,11 +540,19 @@ h2, h1 {
   padding: .5rem 1.2rem;
   color: white;
   font-weight: bold;
-  width: 100px;
   cursor: pointer;
 }
-.options .yes {
+.alert-content button {
+  width: 100px;
+}
+.checkout-success-content button {
+  width: 150px;
+}
+.alert-content .options .yes {
   background-color: rgb(222, 49, 49);
+}
+.checkout-success-content .options .yes {
+  background-color: #4caf50;
 }
 .options .no {
   background-color: #adadad;
@@ -621,6 +628,13 @@ textarea {
   max-width: 1600px;
   padding: 20px;
 }
+.cart-empty-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
 .send-method {
   display: flex;
   align-items: center;
@@ -680,4 +694,86 @@ input[type="text"], textarea, input[type="date"], input[type="time"] {
 }
 .shipping-title {
   text-align: center;
+}
+.not-found-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+.not-found h1 {
+  font-size: 40px;
+}
+.not-found p {
+  font-size: 24px;
+}
+.halal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.halal-footer img {
+  height: 100px;
+  justify-content: right;
+}
+.halal-footer p {
+  font-size: 18px;
+}
+.recap-items-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.recap-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkout-success-content {
+  padding: 24px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+.success-overlay button,
+.not-found-wrapper button,
+.cart-empty-container button {
+  background-color: #fdffd9;
+  cursor: pointer;
+  padding: 12px;
+}
+.success-overlay button {
+  border-radius: 16px;
+  height: 40px;
+  border: 1px solid #e4eea9;
+}
+.not-found-wrapper button {
+  border-radius: 24px;
+  font-weight: 600;
+  background-color: #3E2723;
+  color: #fdffd9;
+  border: none;
+  font-size: 16px;
+  height: 45px;
+}
+.cart-empty-container button {
+  border-radius: 24px;
+  font-weight: 600;
+  background-color: #3E2723;
+  color: #fdffd9;
+  border: none;
+  font-size: 16px;
+  height: 45px;
 }

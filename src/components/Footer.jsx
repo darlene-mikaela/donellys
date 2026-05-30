@@ -11,6 +11,10 @@ export default function Footer() {
                     <a href="whatsapp" className="fa fa-whatsapp"></a>
                     <a href="email" className="fa fa-envelope"></a>
                 </div>
+                <div className="halal-footer">
+                    <img src="../images/halal.png" alt="Halal Indonesia Certification" className="halal-badge" />
+                    <p>Certified Halal</p>
+                </div>
             </div>
         </footer>
     )
