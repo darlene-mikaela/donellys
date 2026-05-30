@@ -364,7 +364,8 @@ h2, h1 {
 }
 .img-container-cart {
   aspect-ratio: 1/1.5;
-  margin: 10px;
+  height: 80%;
+  padding: 10px;
 }
 .img-container-cart img {
   width: 100%;

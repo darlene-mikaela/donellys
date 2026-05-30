@@ -16,7 +16,7 @@ export default function CheckoutSuccess({ onCancelCheckout, onConfirmCheckout, c
                         <div className="big-check">&#x2714;</div>
                         <h2>Placed Your Order Successfully!</h2>
                         <p>Thank you for ordering. Please wait for us to confirm your order.</p>
-                        <NavLink to="/"><button name="to-home">Back to Home</button></NavLink>
+                        <NavLink to="/"><button name="to-home" onClick={onConfirmCheckout}>Back to Home</button></NavLink>
                     </div>
                 </div> : <div className="checkout-success-content">
                     <h2>Confirm Your Order</h2>

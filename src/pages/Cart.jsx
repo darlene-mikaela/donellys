@@ -57,7 +57,10 @@ export default function Cart({ basket, onUpdateQuantity, onDeleteClick, onTrashC
                         <h3>Shipping Details</h3>
                         <p>Please fill out your delivery details to complete your order.</p>
                     </div>
-                    <form>
+                    <form onSubmit={(e) => {
+                        e.preventDefault();
+                        setShowCheckoutConfirm(true);
+                    }}>
                         <h4>Personal Info</h4>
                         <div className="personal-info">
                             <div className="sender-name-container">
@@ -125,10 +128,7 @@ export default function Cart({ basket, onUpdateQuantity, onDeleteClick, onTrashC
                         </div>
 
                         <div className="submit-btn">
-                            <button type="button" name="submit" onClick={(e) => {
-                                e.preventDefault();
-                                setShowCheckoutConfirm(true);
-                            }}>Finish my order!</button>
+                            <button type="submit" name="submit">Finish my order!</button>
                         </div>
                     </form>
                 </div>

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes, useNavigate } from "react-router";
 import React, { useState, useEffect } from 'react';
 import Home from './pages/Home';
 import Menus from "./pages/Menus";
@@ -12,6 +12,7 @@ export default function App() {
     return savedBasket ? JSON.parse(savedBasket) : [];
   });
   const [itemToDelete, setItemToDelete] = useState(null);
+  const navigate = useNavigate();
   
   useEffect(() => {
     localStorage.setItem("myBasket", JSON.stringify(basket));
@@ -66,6 +67,7 @@ export default function App() {
 
   const handleConfirmCheckout = () => {
     setBasket([]);
+    navigate("/");
   }
 
   return (<>
