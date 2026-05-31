@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function CartCards({ item, onUpdateQuantity, onDeleteClick, onTrashClick }) {
     return (
         <div className="cart-card">
-            <div className="cart-main-info">
+            {/* <div className="cart-main-info"> */}
                 <div className="img-container-cart">
                     <img src={item.image} alt={item.title} />
                 </div>
@@ -12,7 +12,7 @@ export default function CartCards({ item, onUpdateQuantity, onDeleteClick, onTra
                     <p>Qty: {item.quantity} (@Rp{item.price.toLocaleString()})</p>
                     <p>Rp{(item.quantity * item.price).toLocaleString()}</p>
                 </div>
-            </div>
+            {/* </div> */}
             <div className="cart-actions">
                 <div className="counter-container">
                     <button onClick={() => onUpdateQuantity(item.id, item.size, -1)}>-</button>
