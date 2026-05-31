@@ -117,6 +117,7 @@ a:visited {
   border-radius: 10px;
   gap: 5px;
   min-width: min(90%,300px);
+  height: auto;
 }
 h2, h1 {
   text-align: center;
@@ -135,6 +136,11 @@ h2, h1 {
 .img-container-card {
   width: 300px;
   margin: 0;
+}
+.img-container-cart {
+  flex: 0 0 25%;
+  max-width: 100px; 
+  min-width: 65px;
 }
 .img-container-card img {
   width: 100%;
@@ -356,6 +362,11 @@ h2, h1 {
   flex-wrap: wrap;
   min-width: min(100%, 300px);
 }
+.cart-item-details {
+  flex: 1;
+  min-width: 0;
+  flex-wrap: wrap;
+}
 .cart-card {
   background-color: white;
   padding: 1.2rem;
@@ -369,6 +380,16 @@ h2, h1 {
   align-items: center;
   box-shadow: 0 4px 10px rgba(18, 19, 18, 0.2);
   box-sizing: border-box;
+  flex-wrap: wrap;
+  min-width: min(90%,300px);
+}
+.cart-main-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 200px;
+  min-width: 0;
+  flex-wrap: wrap;
 }
 .img-container-cart img {
   width: 100%;
@@ -377,7 +398,12 @@ h2, h1 {
   object-position: center;
 }
 .card .summary {
-  height: 3rem;
+  height: auto;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.card .price-tag {
+  margin-top: auto;
 }
 .card-title {
   height: 2rem;
@@ -391,6 +417,9 @@ h2, h1 {
   flex-direction: column;
   margin-left: auto;
   gap: 15px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  margin-left: 12px;
 }
 .cart-actions .counter-container {
   border-radius: 5px;
@@ -495,6 +524,7 @@ h2, h1 {
   text-align: center;
   background-color: white;
   border-radius: 20px;
+  min-width: min(90%,300px);
 }
 .signature-card .img-container {
   width: 80%;
@@ -523,6 +553,7 @@ h2, h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-width: min(90%,300px);
 }
 .testimony .container {
   display: flex;
@@ -625,6 +656,11 @@ h2, h1 {
   flex-direction: row;
   align-items: center;
   width: 100%;
+}
+.send-method input[type="radio"] {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
 }
 .shipping-form-container label {
   width: 180px; 
