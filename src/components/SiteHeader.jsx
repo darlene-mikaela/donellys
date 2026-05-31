@@ -4,7 +4,7 @@ export default function SiteHeader() {
   return (
     <header className="header">
       <Link className="brand" to="/">
-        <img src="../images/donellys-logo.jpg" alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/donellys-logo.jpg`} alt="" />
       </Link>
 
       <nav className="nav">

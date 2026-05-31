@@ -20,17 +20,17 @@ export default function Home() {
             <div className="signature">
                 <h2>Our Signature Creations</h2>
                 <div className="container">
-                    <SignatureCards image={"../images/nastar2.webp"} title={"Nastar Jumbo"} desc={"Oversized, premium golden pastries made with real Wijsman butter and packed with rich, homemade pineapple jam. They literally melt in your mouth!"} />
-                    <SignatureCards image={"../images/macaroni.webp"} title={"Macaroni Schotel"} desc={"A rich, comforting blend of savory macaroni, premium smoked beef, and a velvety, melted cheese crust. Baked fresh daily and served warm in a shared pan."} />
+                    <SignatureCards image={import.meta.env.BASE_URL + "images/nastar2.webp"} title={"Nastar Jumbo"} desc={"Oversized, premium golden pastries made with real Wijsman butter and packed with rich, homemade pineapple jam. They literally melt in your mouth!"} />
+                    <SignatureCards image={import.meta.env.BASE_URL + "images/macaroni.webp"} title={"Macaroni Schotel"} desc={"A rich, comforting blend of savory macaroni, premium smoked beef, and a velvety, melted cheese crust. Baked fresh daily and served warm in a shared pan."} />
                 </div>
                 <NavLink to="/menu"><button>See Full Menu and Pricing</button></NavLink>
             </div>
             <div className="packaging">
                 <h2>Different Occasions, Different Packagings!</h2>
                 <div className="container">
-                    <img src="../images/nastar-imlek.webp" alt="dus nastar imlek" className="img-container" />
-                    <img src="../images/nastar-idulfitri.webp" alt="dus nastar idul fitri" className="img-container" />
-                    <img src="../images/nastar-nataru.webp" alt="dus nastar natal tahun baru" className="img-container" />
+                    <img src={`${import.meta.env.BASE_URL}images/nastar-imlek.webp`} alt="dus nastar imlek" className="img-container" />
+                    <img src={`${import.meta.env.BASE_URL}images/nastar-idulfitri.webp`} alt="dus nastar idul fitri" className="img-container" />
+                    <img src={`${import.meta.env.BASE_URL}images/nastar-nataru.webp`} alt="dus nastar natal tahun baru" className="img-container" />
                 </div>
             </div>
             <div className="testimony">

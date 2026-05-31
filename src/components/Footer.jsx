@@ -10,7 +10,7 @@ export default function Footer() {
                     <a href="https://wa.me/6285100604342?text=Halo%20Kak%20mau%20tanya%dong" target="_blank" className="fa fa-whatsapp"></a>
                 </div>
                 <div className="halal-footer">
-                    <img src="../images/halal.png" alt="Halal Indonesia Certification" className="halal-badge" />
+                    <img src={`${import.meta.env.BASE_URL}images/halal.png`} alt="Halal Indonesia Certification" className="halal-badge" />
                     <p>Certified Halal</p>
                 </div>
                 <p className="slogan">- One bite is never enough -</p>
