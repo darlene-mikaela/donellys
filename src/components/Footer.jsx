@@ -2,19 +2,18 @@ export default function Footer() {
     return (
         <footer>
             <div className="footer">
-                <h5>Contact us</h5>
-                <p>One bite is never enough</p>
+                <h5>Contact Us</h5>
+                <p className="small">Follow our social media to get recent updates!</p>
                 <div className="sosmed">
-                    <a href="https://www.instagram.com/do_nellys" className="fa fa-instagram"></a>
-                    <a href="https://www.instagram.com/buttersweetcakes.surabaya/" className="fa fa-instagram"></a>
-                    <a href="facebook.com" className="fa fa-facebook"></a>
-                    <a href="whatsapp" className="fa fa-whatsapp"></a>
-                    <a href="email" className="fa fa-envelope"></a>
+                    <a href="https://www.instagram.com/do_nellys" target="_blank" className="fa fa-instagram"></a>
+                    <a href="https://www.instagram.com/buttersweetcakes.surabaya/" target="_blank" className="fa fa-instagram"></a>
+                    <a href="https://wa.me/6285100604342?text=Halo%20Kak%20mau%20tanya%dong" target="_blank" className="fa fa-whatsapp"></a>
                 </div>
                 <div className="halal-footer">
                     <img src="../images/halal.png" alt="Halal Indonesia Certification" className="halal-badge" />
                     <p>Certified Halal</p>
                 </div>
+                <p className="slogan">- One bite is never enough -</p>
             </div>
         </footer>
     )

@@ -11,8 +11,9 @@ export default function Home() {
         <div className="home-content">
             <div className="intro">
                 <div className="container">
+                    <span className="announcement">📢 Next Pre-Order Batch Opens Friday, 10:00 AM</span>
                     <h1 className="headline">Freshly Baked Happiness</h1>
-                    <p className="sub-headline">Indulge in our premium artisan pastries, classic golden Nastar, and savory Macaroni Schotel—crafted with love, rich premium butter, and the finest ingredients delivered straight to your doorstep.</p>
+                    <p className="sub-headline">Indulge in our premium artisan pastries, classic golden Nastar, and savory Macaroni Schotel. Crafted with love, rich premium butter, and the finest ingredients delivered straight to your doorstep.</p>
                     <NavLink to="/menu"><button>Explore Our Menu</button></NavLink>
                 </div>
             </div>

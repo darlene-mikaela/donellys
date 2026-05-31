@@ -23,8 +23,14 @@ body {
   font-size: 25px;
   margin: 0;
 }
-.footer p {
+.footer .slogan {
   font-size: 20px;
+  font-style: italic;
+  color: #3f3331;
+}
+.footer .small {
+  font-size: 16px;
+  margin: 5px 0 20px;
 }
 .sosmed {
   display: flex;
@@ -288,9 +294,6 @@ h2, h1 {
   object-fit: cover;
   object-position: center;
 }
-/* .popup-content h2 {
-  height: 5%;
-} */
 .popup-content p {
   margin: 0;             
   padding: 4px 12px;     
@@ -350,7 +353,7 @@ h2, h1 {
 }
 .cart-card {
   background-color: white;
-  padding: 2rem;
+  padding: 1.2rem;
   margin: 1rem 0;
   border-radius: 16px;
   display: flex;
@@ -362,11 +365,12 @@ h2, h1 {
   box-shadow: 0 4px 10px rgba(18, 19, 18, 0.2);
   box-sizing: border-box;
 }
-.img-container-cart {
+/* .img-container-cart {
   aspect-ratio: 1/1.5;
   height: 80%;
-  padding: 10px;
-}
+  padding: 5px;
+  box-sizing: border-box;
+} */
 .img-container-cart img {
   width: 100%;
   height: 100%;
@@ -405,20 +409,31 @@ h2, h1 {
   gap: 40px;
 }
 .intro {
-  padding: 3rem;
   text-align: center;
+  width: 100%; 
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%; 
-  box-sizing: border-box;
 }
 .intro,
 .packaging {
   background-color: #fffde7;
 }
+.intro h1 {
+  margin: 10px;
+}
+.intro .container p {
+  margin: 8px;
+}
 .intro .container {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 70%;
+  gap: 8px;
 }
 .intro p {
   max-width: 650px;
@@ -441,7 +456,9 @@ h2, h1 {
   color: #fdffd9;
   background-color: #2f211e;
 }
-.signature button {
+.signature button,
+.not-found button,
+.cart-empty-container button {
   color: #2f211e;
   background-color: #fdffd9;
 }
@@ -719,7 +736,7 @@ input[type="text"], textarea, input[type="date"], input[type="time"] {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .halal-footer img {
   height: 100px;
@@ -763,8 +780,6 @@ input[type="text"], textarea, input[type="date"], input[type="time"] {
 .not-found-wrapper button {
   border-radius: 24px;
   font-weight: 600;
-  background-color: #3E2723;
-  color: #fdffd9;
   border: none;
   font-size: 16px;
   height: 45px;
@@ -772,9 +787,15 @@ input[type="text"], textarea, input[type="date"], input[type="time"] {
 .cart-empty-container button {
   border-radius: 24px;
   font-weight: 600;
-  background-color: #3E2723;
-  color: #fdffd9;
   border: none;
   font-size: 16px;
   height: 45px;
+}
+.intro .container .announcement {
+  border: 1px solid #3E2723;
+  background-color: #ffffff;
+  color: #3E2723;
+  padding: .8rem 1.2rem;
+  box-sizing: border-box;
+  border-radius: 24px;
 }
