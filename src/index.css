@@ -112,9 +112,9 @@ a:visited {
   flex-direction: column;
   box-sizing: border-box;
   background-color: #fdffd9;
-  padding: 1.5rem;
+  padding: 24px;
   border-radius: 10px;
-  gap: 20px;
+  gap: 5px;
 }
 h2, h1 {
   text-align: center;
@@ -131,7 +131,8 @@ h2, h1 {
   overflow: hidden;
 }
 .img-container-card {
-  width: 80px;
+  width: 300px;
+  margin: 0;
 }
 .img-container-card img {
   width: 100%;
