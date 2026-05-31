@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="sosmed">
                     <a href="https://www.instagram.com/do_nellys" target="_blank" className="fa fa-instagram"></a>
                     <a href="https://www.instagram.com/buttersweetcakes.surabaya/" target="_blank" className="fa fa-instagram"></a>
-                    <a href="https://wa.me/6285100604342?text=Halo%20Kak%20mau%20tanya%dong" target="_blank" className="fa fa-whatsapp"></a>
+                    <a href="https://wa.me/6285100604342?text=Halo%20Kak👋,%20mau%20tanya%20dong%21" target="_blank" className="fa fa-whatsapp"></a>
                 </div>
                 <div className="halal-footer">
                     <img src={`${import.meta.env.BASE_URL}images/halal.png`} alt="Halal Indonesia Certification" className="halal-badge" />
