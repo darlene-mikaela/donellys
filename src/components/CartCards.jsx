@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function CartCards({ item, onUpdateQuantity, onDeleteClick, onTrashClick }) {
-    console.log("Cart item image string is:", item.image);
     return (
         <div className="cart-card">
             <div className="img-container-cart">
