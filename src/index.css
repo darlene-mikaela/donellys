@@ -32,6 +32,7 @@ body {
 .footer .small {
   font-size: 16px;
   margin: 5px 0 20px;
+  text-align: center;
 }
 .sosmed {
   display: flex;
@@ -115,6 +116,7 @@ a:visited {
   padding: 24px;
   border-radius: 10px;
   gap: 5px;
+  min-width: min(90%,300px);
 }
 h2, h1 {
   text-align: center;
@@ -352,6 +354,7 @@ h2, h1 {
   flex: 1.2;
   padding: 0;
   flex-wrap: wrap;
+  min-width: min(100%, 300px);
 }
 .cart-card {
   background-color: white;
@@ -458,6 +461,9 @@ h2, h1 {
   color: #2f211e;
   background-color: #fdffd9;
 }
+.cart-empty-container p {
+  text-align: center;
+}
 .signature,
 .packaging {
   width: 100%;
@@ -477,6 +483,7 @@ h2, h1 {
   align-items: center;
   justify-content: center;
   gap: 40px;
+  flex-wrap: wrap;
 }
 .signature-card {
   padding: 2rem;
@@ -584,6 +591,14 @@ h2, h1 {
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   width: 100%;
+  min-width: min(100%, 300px);
+  overflow: hidden;
+}
+.shipping-form-container form {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .shipping-details-card h3, 
 .shipping-details-card h4 {
@@ -641,6 +656,7 @@ textarea {
   gap: 20px;
   max-width: 1600px;
   padding: 20px;
+  flex-wrap: wrap;
 }
 .cart-empty-container {
   display: flex;
