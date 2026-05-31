@@ -512,6 +512,10 @@ h2, h1 {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  width: 85%;
+}
+.packaging h2 {
+  width: 85%;
 }
 .signature-card {
   padding: 2rem;
@@ -523,7 +527,7 @@ h2, h1 {
   text-align: center;
   background-color: white;
   border-radius: 20px;
-  min-width: min(90%,300px);
+  min-width: min(80%,300px);
   margin: 0 1.2rem;
 }
 .signature-card .img-container {
@@ -555,12 +559,16 @@ h2, h1 {
   flex-direction: column;
   width: 90%;
 }
+.testimony h2 {
+  width: 85%;
+}
 .testimony .container {
   display: flex;
   align-items: stretch;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  width: 85%;
 }
 .testimony-card {
   width: 250px;
