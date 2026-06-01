@@ -139,7 +139,7 @@ h2, h1 {
 }
 .img-container-cart {
   /* flex: 0 0 32%; */
-  max-width: 300px; 
+  max-width: 200px; 
   min-width: min(25%,65px);
 }
 .img-container-card img {
