@@ -80,7 +80,7 @@ export default function Cart({ basket, onUpdateQuantity, onDeleteClick, onTrashC
                         <div className="send-method">
                             <div className="container">
                                 <input type="radio" name="send-method" id="delivery" onClick={() => setShowAddress(true)} />
-                                <label htmlFor="delivery">Home Delivery</label>
+                                <label htmlFor="delivery">Delivery</label>
                             </div>
                             <div className="container">
                                 <input type="radio" name="send-method" id="pickup" onClick={() => setShowAddress(false)} defaultChecked />
